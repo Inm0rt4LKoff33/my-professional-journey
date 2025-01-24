@@ -10,9 +10,6 @@ const config = {
       fallback: null,
       precompress: false,
     }),
-    prerender: {
-      enabled: true,
-    },
     paths: {
       base: "/my-professional-journey",
     },
