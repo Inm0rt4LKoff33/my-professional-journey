@@ -3,7 +3,7 @@
   import Header from "../components/Header.svelte";
   import Footer from "../components/Footer.svelte";
 
-  export const prerenderer = true;
+  export const prerender = true;
 
   let y;
   let innerHeight = 0;
