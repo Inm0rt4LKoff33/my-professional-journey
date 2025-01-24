@@ -8,7 +8,7 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"lint": "eslint .",
-		"deploy": "nnpm build && pnpx gh-pages -d build -t true"
+		"deploy": "pnpm build && pnpx gh-pages -d build -t true"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.5",
