@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy Portafolio App to GitHub Pages
 
 on:
   push:
@@ -7,12 +7,23 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: "22"
+
+      - name: Install Dependencies
+        run: npm install
+
       - name: Build the app
         run: npm run build
+
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: peaceiris/actions-gh-pages@v3
         with:
           branch: gh-pages
           folder: build
