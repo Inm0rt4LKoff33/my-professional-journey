@@ -5,6 +5,9 @@ import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
 const config = {
   kit: {
     adapter: adapter(),
+    paths: {
+      base: process.env.NODE_ENV === "production" ? "My-Professional-Portfolio" : "",
+    },
   },
   preprocess: vitePreprocess(),
 };
